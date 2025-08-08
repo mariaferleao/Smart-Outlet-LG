@@ -1,0 +1,41 @@
+@if (product) {
+<div class="product-page-container">
+  <div class="breadcrumb">
+      <span>Produtos</span>
+      <span class="breadcrumb-separator">></span>
+      <span class="product-type"> TVs </span>
+  </div>
+
+  <h1 class="product-title">{{ product.name }}</h1>
+
+  <div class="product-main-section">
+    <div class="product-image-container">
+      <div class="quality-badge">{{ product.quality }}</div>
+      <img [src]="product.img" alt="Image of {{ product.name }}" class="product-image">
+    </div>
+
+    <div class="product-details-container">
+      <div class="description-section">
+        <h2>Descrição do Produto</h2>
+        <p>{{ product.description }}</p>
+      </div>
+
+      <div class="quality-info-section">
+        <h2>Classe de Qualidade: {{ product.quality }}</h2>
+        <p>Este produto é classificado como Classe A, o que significa que está em excelente estado, com pouquíssimas ou nenhuma marca de uso.</p>
+      </div>
+
+      <div class="price-and-action-section">
+        <div class="price-info">
+          <p class="product-price">R$ {{ product.price.toFixed(2) }}</p>
+          <p class="payment-method">À vista no PIX</p>
+        </div>
+        <button class="btn-primary">Solicitar</button>
+      </div>
+    </div>
+  </div>
+</div>
+}
+@else {
+  <p class="loading-message">Carregando produto...</p>
+}

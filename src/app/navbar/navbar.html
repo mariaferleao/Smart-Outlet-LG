@@ -1,9 +1,9 @@
 <nav class="navbar">
   <div class="navbar-logo">
-    <img src="assets/logo_lg.png" alt="LG Logo" />
+    <img src="assets/logo_lg.png" alt="LG Logo" [routerLink] ="['/products']"/>
   </div>
   <div class="navbar-buttons">
-    <button (click)="selectButton('products')" [class.selected]="selectedButton === 'products'">Produtos</button>
+    <button (click)="selectButton('products')" [class.selected]="selectedButton === 'products'" [routerLink] ="['/products']">Produtos</button>
     <button (click)="selectButton('classified')" [class.selected]="selectedButton === 'classified'">Minhas Solicitações</button>
     <button (click)="selectButton('history')" [class.selected]="selectedButton === 'history'">FAQ</button>
   </div>

@@ -1,1 +1,55 @@
-<p>home-page works!</p>
+<img src="assets/img_degrade.png" alt="Decorative background" class="degrade-image"/>
+
+<div class="main-content">
+  <div class="filter-buttons-container">
+    <div class="filter-div">
+      <button class="filter-button">
+        <img src="assets/icon_tv.png" alt="Filter TVs">
+      </button>
+      <div class="filter-label">
+        TVs
+      </div>
+    </div>
+    <div class="filter-div">
+      <button class="filter-button">
+        <img src="assets/icon_monitor.png" alt="Filter Monitors">
+      </button>
+      <div class="filter-label">
+        Monitor
+      </div>
+    </div>
+    <div class="filter-div">
+      <button class="filter-button">
+        <img src="assets/icon_microondas.png" alt="Filter Microwaves">
+      </button>
+      <div class="filter-label">
+        Micro-ondas
+      </div>
+    </div>
+    <div class="filter-div">
+      <button class="filter-button">
+        <img src="assets/icon_ar.png" alt="Filter Air Conditioning">
+      </button>
+      <div class="filter-label">
+        Ar-Condicionado
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-filter-container">
+    <select class="quality-dropdown">
+      <option value="">Todas as Classes</option>
+      <option value="A">Classe A</option>
+      <option value="B">Classe B</option>
+      <option value="C">Classe C</option>
+      <option value="D">Classe D</option>
+      <option value="E">Classe E</option>
+    </select>
+    <div class="all-products-link">Todos os produtos</div>
+  </div>
+  <div class="product-list-container">
+    @for (product of products; track product.id) {
+    <app-card-produto [product]="product" />
+      }
+  </div>
+</div>
